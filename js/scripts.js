@@ -1,15 +1,18 @@
 $(document).ready(function() {
   $("#inputForm").submit(function(event) {
 
-    var input1 = parseInt($("#input1").val());
-    var input2 = parseInt($("#input2").val());
-    var setnumbers = []
-  
+    var vowels = {'a':'-', 'e':'-', 'i':'-', 'o':'-', 'u':'-'};
+    var phrase = $('#phrase').val();
+    var newphrase = []
 
-    for (var index = input2; index <= input1; index += input2)
-      setnumbers.push(index);
+    phrase = phrase.replace(/[aeiou]/g, m => vowels[m]);
+    console.log(phrase);
 
-    $('#answer').text(setnumbers);
-  event.preventDefault();
+    newphrase.push(phrase);
+
+    $('#message').text(newphrase);
+    $('#inputForm').hide();
+
+    event.preventDefault();
   });
 });

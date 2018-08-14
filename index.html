@@ -9,7 +9,19 @@
     <title>Counting numbers</title>
   </head>
   <body>
-    <h1>Input your numbers!</h1>
-
+    <div class="container">
+      <h1>Guess the phrase!</h1>
+      <form id="inputForm">
+        <div class="form-group">
+          <label for="phrase">Input a phrase here</label>
+          <input type="text"  id="phrase">
+        </div>
+        <button type="submit" name="btn">Submit</button>
+      </form>
+      <div class="hiddenMessage">
+        <h2>Guess your friend's phrase</h2>
+        <p><span id="message"></span></p>
+      </div>
+    </div>
   </body>
 </html>
